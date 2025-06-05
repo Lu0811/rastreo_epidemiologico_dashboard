@@ -1,0 +1,127 @@
+/* Estilo global */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f3f3f3;
+  color: #333;
+}
+
+/* Contenedor principal */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Título principal */
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2.5rem;
+  color: #2c3e50;
+}
+
+/* Secciones de las visualizaciones */
+.card {
+  background-color: #ffffff;
+  border-radius: 8px;
+  margin-bottom: 30px;
+  padding: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Título de cada sección */
+.card h2 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-size: 1.3rem;
+  color: #34495e;
+  font-weight: 600;
+}
+
+/* Contenedores de gráficos */
+.chart-container {
+  width: 100%;
+  height: 400px; /* Tamaño estándar para los gráficos */
+  overflow-x: auto;
+}
+
+/* SVG */
+svg {
+  width: 100%;
+  height: auto;
+}
+
+/* Estilos de los filtros de fecha */
+.card input[type="month"] {
+  margin-right: 10px;
+  padding: 8px;
+  font-size: 1rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.card button {
+  padding: 8px 16px;
+  font-size: 1rem;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.card button:hover {
+  background-color: #2980b9;
+}
+
+/* Estilo para los enlaces */
+a {
+  color: #3498db;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Estilo para la visualización de los filtros de fecha */
+#filters {
+  margin-bottom: 20px;
+}
+
+#filters label {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+#filters input,
+#filters button {
+  margin-top: 10px;
+  font-size: 1rem;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  .card {
+    padding: 15px;
+  }
+
+  .card h2 {
+    font-size: 1.2rem;
+  }
+
+  /* Hacer que los gráficos sean más pequeños en pantallas pequeñas */
+  .chart-container {
+    height: 300px;
+  }
+}

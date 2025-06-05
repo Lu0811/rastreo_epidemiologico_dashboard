@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dashboard de Transporte</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" />
+</head>
+<body>
+  <div class="container">
+    <h1>🚍✈️ Dashboard Interactivo de Transporte</h1>
+
+    <!-- Filtros de fecha (para algunas visualizaciones) -->
+    <section class="card">
+      <h2>📅 Filtros de Fecha</h2>
+      <div id="filters">
+        <label for="start-date">Fecha de inicio:</label>
+        <input type="month" id="start-date" name="start-date" value="2019-01">
+
+        <label for="end-date">Fecha de fin:</label>
+        <input type="month" id="end-date" name="end-date" value="2021-12">
+
+        <button id="apply-filters">Aplicar filtros</button>
+      </div>
+    </section>
+
+    <!-- 1. Evolución mensual de boletos vendidos -->
+    <section class="card">
+      <h2>📊 Evolución Mensual: Aéreo vs Rodoviario</h2>
+      <div id="grafico-area-apilada" class="chart-container"></div>
+    </section>
+
+    <!-- 2. Distribución de boletos vendidos por tipo de transporte -->
+    <section class="card">
+      <h2>🚏 Distribución de Boletos Vendidos: Aéreo vs Rodoviario</h2>
+      <div id="grafico-distribucion-boletos" class="chart-container"></div>
+    </section>
+
+    <!-- 3. Comparación total de boletos vendidos -->
+    <section class="card">
+      <h2>🔄 Comparación Total: Rodoviario vs Aéreo</h2>
+      <div id="grafico-comparacion-total" class="chart-container"></div>
+    </section>
+
+  </div>
+
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="{{ url_for('static', filename='scripts.js') }}"></script>
+</body>
+</html>
